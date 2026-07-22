@@ -1,0 +1,9 @@
+<odoo>
+    <data>
+        <menuitem id = "sales_order_menu_root" name ="Sales Order Menu Utama">
+            <menuitem id = "test_first_level_menu" name = "Pages">
+                <menuitem id="menu1" action = "sales_order_action"/>
+            </menuitem>
+        </menuitem>
+    </data>
+</odoo>
