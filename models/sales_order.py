@@ -5,7 +5,8 @@ class SalesOrder(models.Model):
     _description = "Sales Order Main"
 
     # ---------- Informasi Di Header
-    name = fields.Char()
+    name = fields.Char() # JANGAN TUNJUKIN INI, buat @api.depends('sales_id') untuk set name
+    sales_id = fields.Char()
     customer_id = fields.Char()
     contact_person = fields.Many2one('res.partner')
     customer_ref_no = fields.Char()
@@ -19,6 +20,17 @@ class SalesOrder(models.Model):
     document_date = fields.Date()
 
     # ------------- Informasi Kolom Contents
+    item_or_service_type = fields.Selection(
+        string = "Item or Service",
+        selection = [('type_item', 'Item'), ('type_service', 'Service')],
+        help = "Tentukan jenis"
+    )
+    summary_type = fields.Selection(
+            string = "Summary Type",
+            selection = [('st_summary', 'Summary'), ('st_none', 'No Summary')],
+            help = "Tentukan jenis"
+        )
+    sales_contents = fields.One2many(comodel_name = "sales_content", inverse_name = "sales_id")
     # Ini bakal pake List dengan fields.One2many(comodel_name = "po_content", inverse_name = "po_id")
 
     # ------------- Informasi Logistics
@@ -32,8 +44,16 @@ class SalesOrder(models.Model):
 
     # -------------- Accounting
     journal_remark = fields.Char()
-    payment_terms = fields.Char() # NOTE : INI MUNGKIN BAKAL JADI DROPDOWN AJA
-    payment_method = fields.Char() # NOTE : INI JUGA BAKAL AJDI DROPDOWN, TAPI GW LUPA CARANYA LOL!!!!
+    payment_terms = fields.Selection(
+        string = "Payment Term",
+        selection = [('pay_cash', 'Cash'), ('pay_bank', 'bank')],
+        help = "Payment term here.."
+    ) 
+    payment_method = fields.Selection(
+        string = "Payment Method",
+        selection = [('pm_1', 'method 1'), ('pm_2', 'method 2')],
+        help = "Payment Method here.."
+    )
     due_date = fields.Date()
     bp_project = fields.Char()
     cancellation_date = fields.Date()

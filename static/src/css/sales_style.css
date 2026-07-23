@@ -1,0 +1,29 @@
+.sl-format-grid{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 20px !important;
+}
+
+.sl-format-bg{
+    display: grid !important;
+    grid-template-rows: repeat(6, 24px);
+    width: 200px;
+    height: max-content;
+}
+
+.sl-contents-header{
+    display: grid !important;
+    grid-template-columns: 50% 50% !important;
+}
+
+.sl-contents-header-item{
+    display: grid !important;
+    grid-template-columns: 25% 75%;
+}
+
+.sl-contents-horizontal-line{
+    border: solid;
+    border-color: black;
+    border-width: 0px;
+    border-bottom-width: 3px;
+}

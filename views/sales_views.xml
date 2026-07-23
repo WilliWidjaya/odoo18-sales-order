@@ -13,19 +13,153 @@
             </field>
         </record>
         
-        <!-- <record id="estate_property_tag_list" model="ir.ui.view">
-            <field name="name">estate.type.viewlist</field>
-            <field name="model">estate_property_offer</field>
+        <record id = "sales_form" model = "ir.ui.view">
+            <field name="name">sales.form</field>
+            <field name="model">sales_order</field>
+            <field name="arch" type="xml">
+                <form string = "Sales Order Form">
+                    <group class = "sl-format-grid">
+                        <sheet>
+                            <group class = "sl-format-grid">
+                                <group class = "sl-format-bg">
+
+                                    <!-- SALES ID -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Sales ID</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="sales_id" placeholder = "e.g. CUS-158232"/>
+                                    </div>
+
+                                    <!-- CUSTOMER ID -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Customer ID</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="customer_id" placeholder = "e.g. cID-001"/>
+                                    </div>
+
+                                    <!-- Contact Person -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Contact Person</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="contact_person"/>
+                                    </div>
+
+                                    <!-- Customer Reference Number -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Customer Ref. No</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="customer_ref_no" placeholder = "e.g. 00122323"/>
+                                    </div>
+
+                                    <!-- Currency -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Currency</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="currency" placeholder = "e.g. Rp. $"/>
+                                    </div>
+
+                                </group>
+                                <group class = "sl-format-bg">
+
+                                    <!-- Sales Order Number -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Sales Order Number</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="sales_order_number" placeholder = "enter sales order num.."/>
+                                    </div>
+
+                                    <!-- Sales Order Status -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Sales Order Status</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="sales_order_status" placeholder = "enter status.."/>
+                                    </div>
+
+                                    <!-- Posting Date -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Posting Date</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="posting_date"/>
+                                    </div>
+
+                                    <!-- Delivery Date -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Delivery Date</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="delivery_date"/>
+                                    </div>
+
+                                    <!-- Document Date -->
+                                    <span class = "o_form_label o_td_label">
+                                        <div class = "o_form_label_override">Document Date</div>
+                                    </span>
+                                    <div class = "input-box-parent-div">
+                                        <field class = "input-box" name="document_date"/>
+                                    </div>
+
+                                </group>
+                            </group>
+                            
+                            
+                            <notebook>
+                                <page string = "Contents">
+                                    <group class = "sl-contents-header">
+                                        <div class = "sl-contents-header-item">
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Item/Service Type</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "item_or_service_type" name="document_date"/>
+                                            </div>
+                                        </div>
+                                        <div class = "sl-contents-header-item">
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Document Date</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="document_date"/>
+                                            </div>
+                                        </div>
+                                    </group>
+                                    <div class = "sl-contents-horizontal-line"></div>
+                                    <field name = "sales_contents"/>
+                                </page>
+                                <page string = "Accounting">
+                                    <div>This page has nothing yet. Stay tuned!</div>
+                                </page>
+                            </notebook>
+
+                        </sheet>
+
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <record id="sales_order_content_view_list" model="ir.ui.view">
+            <field name="name">sales.order.content.viewlist</field>
+            <field name="model">sales_content</field>
             <field name="arch" type="xml">
                 <list string = "Channel">
-                    <field name="price"/>
-                    <field name="partner_id" string = "Partner"/>
-                    <button name="on_accept_offer_button_presed" type = "object" string = "ACCEPT"/>
-                    <button name="on_reject_offer_button_presed" type = "object" string = "REJECT"/>
-                    <field name="status"/>
+                    <field name="item_no"/>
+                    <field name="item_desc"/>
+                    <field name="quantity"/>
+                    <field name="uom_code"/>
+                    <field name="unit_price"/>
+                    <field name="discount_percentage"/>
+                    <field name="tax_code"/>
                 </list>
             </field>
-        </record> -->
+        </record>
         
         <record id="sales_order_action" model="ir.actions.act_window">
             <field name="name">Halaman Sales Order</field>
