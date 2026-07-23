@@ -133,8 +133,143 @@
                                     <div class = "sl-contents-horizontal-line"></div>
                                     <field name = "sales_contents"/>
                                 </page>
+                                
+                                <page string = "Logistics">
+                                    <group class = "sl-logistics-format">
+                                        
+                                        <group class = "sl-logistics-left">
+                                            <group class = "sl-logistics-group">
+                                                <group>
+                                                    <span class = "o_form_label o_td_label">
+                                                        <div class = "o_form_label_override">Shipping Location</div>
+                                                    </span>
+                                                    <div class = "input-box-parent-div">
+                                                        <field class = "summary_type" name="shipping_location"/>
+                                                    </div>
+                                                </group>
+                                                <group>
+                                                    <span class = "o_form_label o_td_label">
+                                                        <div class = "o_form_label_override"></div>
+                                                    </span>
+                                                    <div class = "input-box-parent-div">
+                                                        <field class = "sl-textbox" name="ship_ta" string = "" />
+                                                    </div>
+                                                </group>
+                                            </group>
+                                            
+                                            <group class = "sl-logistics-group">
+                                                <group>
+                                                    <span class = "o_form_label o_td_label">
+                                                        <div class = "o_form_label_override">Pay To</div>
+                                                    </span>
+                                                    <div class = "input-box-parent-div">
+                                                        <field class = "summary_type" name="payment_info"/>
+                                                    </div>
+                                                </group>
+                                                <group>
+                                                    <span class = "o_form_label o_td_label">
+                                                        <div class = "o_form_label_override"></div>
+                                                    </span>
+                                                    <div class = "input-box-parent-div">
+                                                        <field class = "sl-textbox" name="pay_ta" string = ""/>
+                                                    </div>
+                                                </group>
+                                            </group>
+                                        </group>
+                                        
+                                        <group class = "sl-logistics-right">
+                                            <field name = "summary_type"/>
+                                        </group>
+                                        
+                                    </group>
+                                </page>
+                                
                                 <page string = "Accounting">
-                                    <div>This page has nothing yet. Stay tuned!</div>
+                                    <group class = "sl-accounting-format">
+                                        
+                                        <group class = "sl-accounting-format-bg">
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Order Number</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="order_number"/>
+                                            </div>
+                                            
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Journal Remarks</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="journal_remark"/>
+                                            </div>
+                                        </group>
+
+
+                                        <group class = "sl-accounting-format-bg">
+
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Payment Term</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="payment_term"/>
+                                            </div>
+
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Payment Method</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="payment_method"/>
+                                            </div>
+                                            
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">BP Project </div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="bp_project"/>
+                                            </div>
+                                            
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Indicator</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="indicator"/>
+                                            </div>
+                                            
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Tax ID</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="tax_id"/>
+                                            </div>
+                                            
+                                            
+                                        </group>
+
+                                        <group class = "sl-accounting-format-bg">
+                                            
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Due Date</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="due_date"/>
+                                            </div>
+                                            
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Cancellation Date</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="cancellation_date"/>
+                                            </div>
+                                            
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Required Date</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="required_date"/>
+                                            </div>
+                                            
+                                            
+                                        </group>
+                                    </group>
                                 </page>
                             </notebook>
 

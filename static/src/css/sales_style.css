@@ -27,3 +27,49 @@
     border-width: 0px;
     border-bottom-width: 3px;
 }
+
+.sl-accounting-format{
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.sl-accounting-format-bg{
+    display: grid !important;
+    grid-template-rows: repeat(6, 24px);
+    width: 200px;
+    height: max-content;
+}
+
+
+.sl-logistics-format{
+    /* background-color: green; */
+    padding: 8px;
+    display: grid !important;
+    grid-template-columns: 50% 50% !important;
+}
+
+.sl-logistics-left{
+    /* background-color: aqua; */
+    width: auto !important;
+    display: flex;
+    flex-direction: column;
+}
+
+.sl-logistics-right{
+    background-color: red;
+    width: auto !important;
+}
+
+.sl-logistics-group{
+    /* background-color: brown; */
+    display:grid !important;
+    width: 100% !important;
+    height: 80px;
+    grid-template-columns: 50% 50% !important;
+}
+
+.sl-textbox {
+    background-color: #d4d4d4;
+    border: solid;
+    border-width: 2px;
+}
