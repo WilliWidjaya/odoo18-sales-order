@@ -55,6 +55,157 @@
             </field>
         </record>
         
+        <!-- LIST DAN FORM CONTACT -->
+        <record id="sales_contact_view_list" model="ir.ui.view">
+            <field name="name">sales.contact.view.list</field>
+            <field name="model">sales_contact</field>
+            <field name="arch" type="xml">
+                <list string = "Channel">
+                    <control>
+                        <create name="custom_line" string="Add a new contact.."/>
+                    </control>
+                    <field name="name"/>
+                    <field name="location"/>
+                </list>
+            </field>
+        </record>
+        
+        <record id="sales_contact_form" model="ir.ui.view">
+            <field name="name">sales.contact.form</field>
+            <field name="model">sales_contact</field>
+            <field name="arch" type="xml">
+                <form string="Request Form">
+                    <header class = "req-header-pad">
+                         <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_contact_action)d"/>
+                         </header>
+                    <group class = "item-format-grid">
+                        <sheet class = "item-format-sheet">
+                            <group class = "item-format-sheet-group">
+                                <div class = "item-group-title"><h3>Informasi Contact</h3></div>
+                                <group class = "item-field-group">
+                                    <field name ="name"/>
+                                    <field name ="location"/>
+                                </group>
+                            </group>
+                        </sheet>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- LIST AND FORM CUSTOMER -->
+        <record id="sales_customer_view_list" model="ir.ui.view">
+            <field name="name">sales.customer.view.list</field>
+            <field name="model">sales_customer</field>
+            <field name="arch" type="xml">
+                <list string = "Channel">
+                    <control>
+                        <create name="custom_line" string="Add a new customer.."/>
+                    </control>
+                    <field name="name"/>
+                    <field name="customer_information"/>
+                </list>
+            </field>
+        </record>
+        
+        <record id="sales_customer_form" model="ir.ui.view">
+            <field name="name">sales.customer.form</field>
+            <field name="model">sales_customer</field>
+            <field name="arch" type="xml">
+                <form string="Request Form">
+                    <header class = "req-header-pad">
+                         <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_customer_action)d"/>
+                         </header>
+                    <group class = "item-format-grid">
+                        <sheet class = "item-format-sheet">
+                            <group class = "item-format-sheet-group">
+                                <div class = "item-group-title"><h3>Informasi Customer</h3></div>
+                                <group class = "item-field-group">
+                                    <field name ="name"/>
+                                    <field name ="customer_information"/>
+                                </group>
+                            </group>
+                        </sheet>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- LIST DAN FORM LOCATION -->
+        <record id="sales_ship_location_view_list" model="ir.ui.view">
+            <field name="name">sales.ship.location.view.list</field>
+            <field name="model">ship_location</field>
+            <field name="arch" type="xml">
+                <list string = "Channel">
+                    <control>
+                        <create name="custom_line" string="Add a new shipping location.."/>
+                    </control>
+                    <field name="shipping_location"/>
+                </list>
+            </field>
+        </record>
+        
+        <record id="sales_ship_location_form" model="ir.ui.view">
+            <field name="name">sales.ship.location.form</field>
+            <field name="model">ship_location</field>
+            <field name="arch" type="xml">
+                <form string="Request Form">
+                    <header class = "req-header-pad">
+                         <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_ship_location_action)d"/>
+                         </header>
+                    <group class = "item-format-grid">
+                        <sheet class = "item-format-sheet">
+                            <group class = "item-format-sheet-group">
+                                <div class = "item-group-title"><h3>Lokasi/Tujuan Shipping</h3></div>
+                                <group class = "item-field-group">
+                                    <field name ="shipping_location"/>
+                                </group>
+                            </group>
+                        </sheet>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- LIST DAN FORM PAYMENT INFORMATION -->
+        <record id="sales_payment_info_view_list" model="ir.ui.view">
+            <field name="name">sales.payment.info.view.list</field>
+            <field name="model">payment_info</field>
+            <field name="arch" type="xml">
+                <list string = "Channel">
+                    <control>
+                        <create name="custom_line" string="Add a new payment information.."/>
+                    </control>
+                    <field name = "name"/>
+                    <field name="payment_details"/>
+                </list>
+            </field>
+        </record>
+        
+        <record id="sales_payment_information_form" model="ir.ui.view">
+            <field name="name">sales.payment.information.form</field>
+            <field name="model">payment_info</field>
+            <field name="arch" type="xml">
+                <form string="Request Form">
+                    <header class = "req-header-pad">
+                         <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_payment_info_action)d"/>
+                    </header>
+                    <group class = "item-format-grid">
+                        <sheet class = "item-format-sheet">
+                            <group class = "item-format-sheet-group">
+                                <div class = "item-group-title"><h3>Informasi Pembayaran</h3></div>
+                                <group class = "item-field-group">
+                                    <field name ="name"/>
+                                    <field name ="payment_details"/>    
+                                </group>
+                            </group>
+                        </sheet>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        
         <!-- LIST DAN FORM ITEM -->
         <record id="sales_item_view_list" model="ir.ui.view">
             <field name="name">sales.item.view.list</field>
@@ -75,9 +226,9 @@
             <field name="model">sales_item</field>
             <field name="arch" type="xml">
                 <form string="Request Form">
-                    <!-- <header class = "req-header-pad">
-                        <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(purchase_order.po_pay_accounts_list)d"/>
-                    </header> -->
+                    <header class = "req-header-pad">
+                        <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_item_action)d"/>
+                    </header>
                     <group class = "item-format-grid">
                         <sheet class = "item-format-sheet">
                             <group class = "item-format-sheet-group">
@@ -220,7 +371,7 @@
                                                 <div class = "o_form_label_override">Item/Service Type</div>
                                             </span>
                                             <div class = "input-box-parent-div">
-                                                <field class = "item_or_service_type" name="document_date"/>
+                                                <field class = "item_or_service_type" name="item_or_service_type"/>
                                             </div>
                                         </div>
                                         <div class = "sl-contents-header-item">

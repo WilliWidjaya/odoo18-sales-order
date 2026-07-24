@@ -72,10 +72,14 @@ class SalesOrder(models.Model):
 
     @api.onchange('shipping_location')
     def set_ship_ta(self):
-        for i in self:
-            i.ship_ta = str(i.shipping_location.shipping_location)
+        if self.shipping_location:
+            self.ship_ta = str(self.shipping_location.shipping_location)
+        else:
+            self.ship_ta = ""
 
     @api.onchange('payment_info')
     def set_pay_ta(self):
-        for i in self:
-            i.pay_ta = str(i.payment_info.payment_details)
+        if self.payment_info:
+            self.pay_ta = str(self.payment_info.payment_details)
+        else:
+            self.pay_ta = ""
