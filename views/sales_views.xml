@@ -1,6 +1,48 @@
 <odoo>
     <data>
         
+        <!-- SALES ORDER MAIN ACTION -->
+        <record id="sales_order_action" model="ir.actions.act_window">
+            <field name="name">Halaman Sales Order</field>
+            <field name="res_model">sales_order</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        
+        <!-- SALES ITEM ACTION -->
+        <record id="sales_item_action" model="ir.actions.act_window">
+            <field name="name">Halaman Sales Item</field>
+            <field name="res_model">sales_item</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        
+        <!-- SALES CONTACT ACTION -->
+        <record id="sales_contact_action" model="ir.actions.act_window">
+            <field name="name">Halaman Sales Contact</field>
+            <field name="res_model">sales_contact</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        
+        <!-- SALES CUSTOMER ACTION -->
+        <record id="sales_customer_action" model="ir.actions.act_window">
+            <field name="name">Halaman Sales Customer</field>
+            <field name="res_model">sales_customer</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        
+        <!-- SALES PAYMENT INFO ACTION -->
+        <record id="sales_payment_info_action" model="ir.actions.act_window">
+            <field name="name">Halaman Sales Payment Info</field>
+            <field name="res_model">payment_info</field>
+            <field name="view_mode">list,form</field>
+        </record>
+        
+        <!-- SALES SALES LOCATION ACTION -->
+        <record id="sales_ship_location_action" model="ir.actions.act_window">
+            <field name="name">Halaman Sales Location</field>
+            <field name="res_model">ship_location</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
         <record id="sales_order_view_list" model="ir.ui.view">
             <field name="name">sales.order.view.list</field>
             <field name="model">sales_order</field>
@@ -13,6 +55,66 @@
             </field>
         </record>
         
+        <!-- LIST DAN FORM ITEM -->
+        <record id="sales_item_view_list" model="ir.ui.view">
+            <field name="name">sales.item.view.list</field>
+            <field name="model">sales_item</field>
+            <field name="arch" type="xml">
+                <list string = "Channel">
+                    <control>
+                        <create name="custom_line" string="Add a new Item.."/>
+                    </control>
+                    <field name="item_code"/>
+                    <field name="item_desc"/>
+                </list>
+            </field>
+        </record>
+        
+        <record id="sales_item_form" model="ir.ui.view">
+            <field name="name">sales.item.form</field>
+            <field name="model">sales_item</field>
+            <field name="arch" type="xml">
+                <form string="Request Form">
+                    <!-- <header class = "req-header-pad">
+                        <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(purchase_order.po_pay_accounts_list)d"/>
+                    </header> -->
+                    <group class = "item-format-grid">
+                        <sheet class = "item-format-sheet">
+                            <group class = "item-format-sheet-group">
+                                <div class = "item-group-title"><h3>Informasi Item</h3></div>
+                                <group class = "item-field-group">
+                                    <field name ="item_code"/>
+                                    <field name ="item_desc"/>
+                                    <field name ="item_uom"/>
+                                    <field name ="item_tax_code"/>
+                                </group>
+                            </group>
+                        </sheet>
+                    </group>
+                </form>
+            </field>
+        </record>
+        
+        <!-- SALES CONTENT FORM -->
+        <record id="sales_content_view_list" model="ir.ui.view">
+            <field name="name">sales.content.view.list</field>
+            <field name="model">sales_content</field>
+            <field name="arch" type="xml">
+                <list string = "Channel" editable = "bottom">
+                    <control>
+                        <create name="custom_line" string="Add a new Item.."/>
+                    </control>
+                    <field name="item_id"/>
+                    <field name="item_desc"/>
+                    <field name="quantity"/>
+                    <field name="uom_code"/>
+                    <field name="unit_price"/>
+                    <field name="tax_code"/>
+                </list>
+            </field>
+        </record>
+        
+
         <record id = "sales_form" model = "ir.ui.view">
             <field name="name">sales.form</field>
             <field name="model">sales_order</field>
@@ -44,7 +146,7 @@
                                         <div class = "o_form_label_override">Contact Person</div>
                                     </span>
                                     <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="contact_person"/>
+                                        <field class = "input-box" name="contact_person" placeholder = "Select a contact.."/>
                                     </div>
 
                                     <!-- Customer Reference Number -->
@@ -87,7 +189,7 @@
                                         <div class = "o_form_label_override">Posting Date</div>
                                     </span>
                                     <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="posting_date"/>
+                                        <field class = "input-box" name="posting_date" placeholder = "select posting date.."/>
                                     </div>
 
                                     <!-- Delivery Date -->
@@ -95,7 +197,7 @@
                                         <div class = "o_form_label_override">Delivery Date</div>
                                     </span>
                                     <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="delivery_date"/>
+                                        <field class = "input-box" name="delivery_date" placeholder = "select delivery date.."/>
                                     </div>
 
                                     <!-- Document Date -->
@@ -103,7 +205,7 @@
                                         <div class = "o_form_label_override">Document Date</div>
                                     </span>
                                     <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="document_date"/>
+                                        <field class = "input-box" name="document_date" placeholder = "select document date.."/>
                                     </div>
 
                                 </group>
@@ -144,7 +246,7 @@
                                                         <div class = "o_form_label_override">Shipping Location</div>
                                                     </span>
                                                     <div class = "input-box-parent-div">
-                                                        <field class = "summary_type" name="shipping_location"/>
+                                                        <field class = "summary_type" name="shipping_location" placeholder = "select shipping location.."/>
                                                     </div>
                                                 </group>
                                                 <group>
@@ -163,7 +265,7 @@
                                                         <div class = "o_form_label_override">Pay To</div>
                                                     </span>
                                                     <div class = "input-box-parent-div">
-                                                        <field class = "summary_type" name="payment_info"/>
+                                                        <field class = "summary_type" name="payment_info" placeholder = "select payment procedure.."/>
                                                     </div>
                                                 </group>
                                                 <group>
@@ -178,7 +280,24 @@
                                         </group>
                                         
                                         <group class = "sl-logistics-right">
-                                            <field name = "summary_type"/>
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">Shipping Type</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="shipping_type"/>
+                                            </div>
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">BP Channel Name</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="bp_channel_name"/>
+                                            </div>
+                                            <span class = "o_form_label o_td_label">
+                                                <div class = "o_form_label_override">BP Channel Contact</div>
+                                            </span>
+                                            <div class = "input-box-parent-div">
+                                                <field class = "summary_type" name="bp_channel_contact"/>
+                                            </div>
                                         </group>
                                         
                                     </group>
@@ -271,6 +390,9 @@
                                         </group>
                                     </group>
                                 </page>
+                                <page string = "Attachments">
+                                    <field name ="att_attachment"/>
+                                </page>
                             </notebook>
 
                         </sheet>
@@ -285,7 +407,7 @@
             <field name="model">sales_content</field>
             <field name="arch" type="xml">
                 <list string = "Channel">
-                    <field name="item_no"/>
+                    <field name="item_id"/>
                     <field name="item_desc"/>
                     <field name="quantity"/>
                     <field name="uom_code"/>
@@ -294,12 +416,6 @@
                     <field name="tax_code"/>
                 </list>
             </field>
-        </record>
-        
-        <record id="sales_order_action" model="ir.actions.act_window">
-            <field name="name">Halaman Sales Order</field>
-            <field name="res_model">sales_order</field>
-            <field name="view_mode">list,form</field>
         </record>
         
     </data>

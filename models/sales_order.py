@@ -66,3 +66,16 @@ class SalesOrder(models.Model):
     indicator = fields.Char()
     tax_id = fields.Char()
     order_number = fields.Char()
+
+    # ------------- Attachments
+    att_attachment = fields.Many2many(comodel_name="ir.attachment")
+
+    @api.onchange('shipping_location')
+    def set_ship_ta(self):
+        for i in self:
+            i.ship_ta = str(i.shipping_location.shipping_location)
+
+    @api.onchange('payment_info')
+    def set_pay_ta(self):
+        for i in self:
+            i.pay_ta = str(i.payment_info.payment_details)

@@ -3,3 +3,7 @@ sales_order.access_sales_order,access_sales_order,sales_order.model_sales_order,
 sales_order.access_sales_content,access_sales_content,sales_order.model_sales_content,base.group_user,1,1,1,1
 sales_order.access_ship_location,access_ship_location,sales_order.model_ship_location,base.group_user,1,1,1,1
 sales_order.access_payment_info,access_payment_info,sales_order.model_payment_info,base.group_user,1,1,1,1
+sales_order.access_sales_item,access_sales_item,sales_order.model_sales_item,base.group_user,1,1,1,1
+sales_order.access_sales_customer,access_sales_customer,sales_order.model_sales_customer,base.group_user,1,1,1,1
+sales_order.access_sales_contact,access_sales_contact,sales_order.model_sales_contact,base.group_user,1,1,1,1
+

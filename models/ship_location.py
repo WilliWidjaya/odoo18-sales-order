@@ -4,7 +4,7 @@ class ShipLocation(models.Model):
     _name = "ship_location"
     _description = "Ship Location"
 
-    name = fields.Char() # Ga bakal di munculin di table
+    name = fields.Char(compute = "change_name") # Ga bakal di munculin di table
     shipping_location = fields.Text()
 
     # Set name ketika item_no diganti (atau on save).

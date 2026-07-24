@@ -1,8 +1,15 @@
 <odoo>
     <data>
-        <menuitem id = "sales_order_menu_root" name ="Sales Order Menu Utama">
+        <menuitem id = "sales_order_menu_root" name ="Sales Order IGU">
             <menuitem id = "test_first_level_menu" name = "Pages">
                 <menuitem id="menu1" action = "sales_order_action"/>
+            </menuitem>
+            <menuitem id="master" name="Master">
+                <menuitem id="view_items" action = "sales_contact_action"/>
+                <menuitem id="view_contacts" action = "sales_customer_action"/>
+                <menuitem id="view_vendors" action = "sales_item_action"/>
+                <menuitem id="view_shipping_locations" action = "sales_ship_location_action"/>
+                <menuitem id="view_pay_accounts" action = "sales_payment_info_action"/>
             </menuitem>
         </menuitem>
     </data>
