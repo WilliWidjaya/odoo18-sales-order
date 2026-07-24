@@ -400,11 +400,11 @@
                                                         <field class = "summary_type" name="shipping_location" placeholder = "select shipping location.."/>
                                                     </div>
                                                 </group>
-                                                <group>
+                                                <group class = "sl-in-parent">
                                                     <span class = "o_form_label o_td_label">
                                                         <div class = "o_form_label_override"></div>
                                                     </span>
-                                                    <div class = "input-box-parent-div">
+                                                    <div class = "sl-in">
                                                         <field class = "sl-textbox" name="ship_ta" string = "" />
                                                     </div>
                                                 </group>
@@ -419,11 +419,11 @@
                                                         <field class = "summary_type" name="payment_info" placeholder = "select payment procedure.."/>
                                                     </div>
                                                 </group>
-                                                <group>
+                                                <group class = "sl-in-parent">
                                                     <span class = "o_form_label o_td_label">
                                                         <div class = "o_form_label_override"></div>
                                                     </span>
-                                                    <div class = "input-box-parent-div">
+                                                    <div class = "sl-in">
                                                         <field class = "sl-textbox" name="pay_ta" string = ""/>
                                                     </div>
                                                 </group>

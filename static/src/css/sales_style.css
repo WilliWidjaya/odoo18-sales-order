@@ -63,7 +63,9 @@
     /* background-color: brown; */
     display:grid !important;
     width: 100% !important;
-    height: 80px;
+    /* height: 80px; */
+    min-height: 80px;
+    height: fit-content;
     grid-template-columns: 50% 50% !important;
 }
 
@@ -71,4 +73,12 @@
     background-color: #d4d4d4;
     border: solid;
     border-width: 2px;
+}
+
+.sl-in-parent{
+    width: 100% !important;
+}
+
+.sl-in{
+    width: 100% !important;
 }
