@@ -75,14 +75,14 @@
             <field name="model">sales_contact</field>
             <field name="arch" type="xml">
                 <form string="Request Form">
-                    <header class = "req-header-pad">
-                         <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_contact_action)d"/>
+                    <header class = "sl-req-header-pad">
+                         <button class = "sl-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_contact_action)d"/>
                          </header>
-                    <group class = "item-format-grid">
-                        <sheet class = "item-format-sheet">
-                            <group class = "item-format-sheet-group">
-                                <div class = "item-group-title"><h3>Informasi Contact</h3></div>
-                                <group class = "item-field-group">
+                    <group class = "sl-item-format-grid">
+                        <sheet class = "sl-item-format-sheet">
+                            <group class = "sl-item-format-sheet-group">
+                                <div class = "sl-item-group-title"><h3>Informasi Contact</h3></div>
+                                <group class = "sl-item-field-group">
                                     <field name ="name"/>
                                     <field name ="location"/>
                                 </group>
@@ -113,14 +113,14 @@
             <field name="model">sales_customer</field>
             <field name="arch" type="xml">
                 <form string="Request Form">
-                    <header class = "req-header-pad">
-                         <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_customer_action)d"/>
+                    <header class = "sl-req-header-pad">
+                         <button class = "sl-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_customer_action)d"/>
                          </header>
-                    <group class = "item-format-grid">
-                        <sheet class = "item-format-sheet">
-                            <group class = "item-format-sheet-group">
-                                <div class = "item-group-title"><h3>Informasi Customer</h3></div>
-                                <group class = "item-field-group">
+                    <group class = "sl-item-format-grid">
+                        <sheet class = "sl-item-format-sheet">
+                            <group class = "sl-item-format-sheet-group">
+                                <div class = "sl-item-group-title"><h3>Informasi Customer</h3></div>
+                                <group class = "sl-item-field-group">
                                     <field name ="name"/>
                                     <field name ="customer_information"/>
                                 </group>
@@ -150,14 +150,14 @@
             <field name="model">ship_location</field>
             <field name="arch" type="xml">
                 <form string="Request Form">
-                    <header class = "req-header-pad">
-                         <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_ship_location_action)d"/>
+                    <header class = "sl-req-header-pad">
+                         <button class = "sl-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_ship_location_action)d"/>
                          </header>
-                    <group class = "item-format-grid">
-                        <sheet class = "item-format-sheet">
-                            <group class = "item-format-sheet-group">
-                                <div class = "item-group-title"><h3>Lokasi/Tujuan Shipping</h3></div>
-                                <group class = "item-field-group">
+                    <group class = "sl-item-format-grid">
+                        <sheet class = "sl-item-format-sheet">
+                            <group class = "sl-item-format-sheet-group">
+                                <div class = "sl-item-group-title"><h3>Lokasi/Tujuan Shipping</h3></div>
+                                <group class = "sl-item-field-group">
                                     <field name ="shipping_location"/>
                                 </group>
                             </group>
@@ -187,14 +187,14 @@
             <field name="model">payment_info</field>
             <field name="arch" type="xml">
                 <form string="Request Form">
-                    <header class = "req-header-pad">
-                         <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_payment_info_action)d"/>
+                    <header class = "sl-req-header-pad">
+                         <button class = "sl-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_payment_info_action)d"/>
                     </header>
-                    <group class = "item-format-grid">
-                        <sheet class = "item-format-sheet">
-                            <group class = "item-format-sheet-group">
-                                <div class = "item-group-title"><h3>Informasi Pembayaran</h3></div>
-                                <group class = "item-field-group">
+                    <group class = "sl-item-format-grid">
+                        <sheet class = "sl-item-format-sheet">
+                            <group class = "sl-item-format-sheet-group">
+                                <div class = "sl-item-group-title"><h3>Informasi Pembayaran</h3></div>
+                                <group class = "sl-item-field-group">
                                     <field name ="name"/>
                                     <field name ="payment_details"/>    
                                 </group>
@@ -226,14 +226,14 @@
             <field name="model">sales_item</field>
             <field name="arch" type="xml">
                 <form string="Request Form">
-                    <header class = "req-header-pad">
-                        <button class = "po-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_item_action)d"/>
+                    <header class = "sl-req-header-pad">
+                        <button class = "sl-header-button btn-primary oi oi-chevron-left" type = "action" string = "Back" name ="%(sales_order.sales_item_action)d"/>
                     </header>
-                    <group class = "item-format-grid">
-                        <sheet class = "item-format-sheet">
-                            <group class = "item-format-sheet-group">
-                                <div class = "item-group-title"><h3>Informasi Item</h3></div>
-                                <group class = "item-field-group">
+                    <group class = "sl-item-format-grid">
+                        <sheet class = "sl-item-format-sheet">
+                            <group class = "sl-item-format-sheet-group">
+                                <div class = "sl-item-group-title"><h3>Informasi Item</h3></div>
+                                <group class = "sl-item-field-group">
                                     <field name ="item_code"/>
                                     <field name ="item_desc"/>
                                     <field name ="item_uom"/>
