@@ -11,6 +11,40 @@
     height: max-content;
 }
 
+.sl-input-box-parent-div{
+    width: max-content;
+    height:24px;
+}
+
+.sl-input-box{
+    /* background-color: green; */
+    font-size: 12px;
+    height: 24px;
+    max-height: 24px;
+    width: max-content;
+    /* width: 250px; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: scroll;
+    border-color: black;
+    color: rgb(28, 28, 28);
+    border: 1px 1px 1px 1px;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.sl-form-label-override{
+    font-size: 12px;
+    height: 24px;
+    max-height: 24px;
+    white-space: nowrap;
+    overflow-x: auto;
+    color : black;
+
+    display:flex;
+    justify-content: start;
+    align-items: center;
+}
+
 .sl-contents-header{
     display: grid !important;
     grid-template-columns: 50% 50% !important;
@@ -70,9 +104,9 @@
 }
 
 .sl-textbox {
-    background-color: #d4d4d4;
+    background-color: #e8e8e8;
     border: solid;
-    border-width: 2px;
+    border-width: 1px;
 }
 
 .sl-in-parent{

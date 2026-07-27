@@ -278,42 +278,42 @@
 
                                     <!-- SALES ID -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Sales ID</div>
+                                        <div class = "sl-form-label-override">Sales ID</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="sales_id" placeholder = "e.g. CUS-158232"/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="sales_id" placeholder = "e.g. CUS-158232"/>
                                     </div>
 
                                     <!-- CUSTOMER ID -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Customer ID</div>
+                                        <div class = "sl-form-label-override">Customer ID</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="customer_id" placeholder = "e.g. cID-001"/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="customer_id" placeholder = "e.g. cID-001"/>
                                     </div>
 
                                     <!-- Contact Person -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Contact Person</div>
+                                        <div class = "sl-form-label-override">Contact Person</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="contact_person" placeholder = "Select a contact.."/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="contact_person" placeholder = "Select a contact.."/>
                                     </div>
 
                                     <!-- Customer Reference Number -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Customer Ref. No</div>
+                                        <div class = "sl-form-label-override">Customer Ref. No</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="customer_ref_no" placeholder = "e.g. 00122323"/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="customer_ref_no" placeholder = "e.g. 00122323"/>
                                     </div>
 
                                     <!-- Currency -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Currency</div>
+                                        <div class = "sl-form-label-override">Currency</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="currency" placeholder = "e.g. Rp. $"/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="currency" placeholder = "e.g. Rp. $"/>
                                     </div>
 
                                 </group>
@@ -321,42 +321,42 @@
 
                                     <!-- Sales Order Number -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Sales Order Number</div>
+                                        <div class = "sl-form-label-override">Sales Order Number</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="sales_order_number" placeholder = "enter sales order num.."/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="sales_order_number" placeholder = "enter sales order num.."/>
                                     </div>
 
                                     <!-- Sales Order Status -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Sales Order Status</div>
+                                        <div class = "sl-form-label-override">Sales Order Status</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="sales_order_status" placeholder = "enter status.."/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="sales_order_status" placeholder = "enter status.."/>
                                     </div>
 
                                     <!-- Posting Date -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Posting Date</div>
+                                        <div class = "sl-form-label-override">Posting Date</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="posting_date" placeholder = "select posting date.."/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="posting_date" placeholder = "select posting date.."/>
                                     </div>
 
                                     <!-- Delivery Date -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Delivery Date</div>
+                                        <div class = "sl-form-label-override">Delivery Date</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="delivery_date" placeholder = "select delivery date.."/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="delivery_date" placeholder = "select delivery date.."/>
                                     </div>
 
                                     <!-- Document Date -->
                                     <span class = "o_form_label o_td_label">
-                                        <div class = "o_form_label_override">Document Date</div>
+                                        <div class = "sl-form-label-override">Document Date</div>
                                     </span>
-                                    <div class = "input-box-parent-div">
-                                        <field class = "input-box" name="document_date" placeholder = "select document date.."/>
+                                    <div class = "sl-input-box-parent-div">
+                                        <field class = "sl-input-box" name="document_date" placeholder = "select document date.."/>
                                     </div>
 
                                 </group>
@@ -368,18 +368,18 @@
                                     <group class = "sl-contents-header">
                                         <div class = "sl-contents-header-item">
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Item/Service Type</div>
+                                                <div class = "sl-form-label-override">Item/Service Type</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
+                                            <div class = "sl-input-box-parent-div">
                                                 <field class = "item_or_service_type" name="item_or_service_type"/>
                                             </div>
                                         </div>
                                         <div class = "sl-contents-header-item">
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Document Date</div>
+                                                <div class = "sl-form-label-override">Document Date</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="document_date"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="document_date"/>
                                             </div>
                                         </div>
                                     </group>
@@ -394,15 +394,15 @@
                                             <group class = "sl-logistics-group">
                                                 <group>
                                                     <span class = "o_form_label o_td_label">
-                                                        <div class = "o_form_label_override">Shipping Location</div>
+                                                        <div class = "sl-form-label-override">Shipping Location</div>
                                                     </span>
-                                                    <div class = "input-box-parent-div">
-                                                        <field class = "summary_type" name="shipping_location" placeholder = "select shipping location.."/>
+                                                    <div class = "sl-input-box-parent-div">
+                                                        <field name="shipping_location" placeholder = "select shipping location.."/>
                                                     </div>
                                                 </group>
                                                 <group class = "sl-in-parent">
                                                     <span class = "o_form_label o_td_label">
-                                                        <div class = "o_form_label_override"></div>
+                                                        <div class = "sl-form-label-override"></div>
                                                     </span>
                                                     <div class = "sl-in">
                                                         <field class = "sl-textbox" name="ship_ta" string = "" />
@@ -413,15 +413,15 @@
                                             <group class = "sl-logistics-group">
                                                 <group>
                                                     <span class = "o_form_label o_td_label">
-                                                        <div class = "o_form_label_override">Pay To</div>
+                                                        <div class = "sl-form-label-override">Pay To</div>
                                                     </span>
-                                                    <div class = "input-box-parent-div">
-                                                        <field class = "summary_type" name="payment_info" placeholder = "select payment procedure.."/>
+                                                    <div class = "sl-input-box-parent-div">
+                                                        <field name="payment_info" placeholder = "select payment procedure.."/>
                                                     </div>
                                                 </group>
                                                 <group class = "sl-in-parent">
                                                     <span class = "o_form_label o_td_label">
-                                                        <div class = "o_form_label_override"></div>
+                                                        <div class = "sl-form-label-override"></div>
                                                     </span>
                                                     <div class = "sl-in">
                                                         <field class = "sl-textbox" name="pay_ta" string = ""/>
@@ -432,22 +432,22 @@
                                         
                                         <group class = "sl-logistics-right">
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Shipping Type</div>
+                                                <div class = "sl-form-label-override">Shipping Type</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="shipping_type"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="shipping_type" placeholder = "--"/>
                                             </div>
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">BP Channel Name</div>
+                                                <div class = "sl-form-label-override">BP Channel Name</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="bp_channel_name"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="bp_channel_name" placeholder = "--"/>
                                             </div>
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">BP Channel Contact</div>
+                                                <div class = "sl-form-label-override">BP Channel Contact</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="bp_channel_contact"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="bp_channel_contact" placeholder = "--"/>
                                             </div>
                                         </group>
                                         
@@ -459,17 +459,17 @@
                                         
                                         <group class = "sl-accounting-format-bg">
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Order Number</div>
+                                                <div class = "sl-form-label-override">Order Number</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="order_number"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="order_number" placeholder = "--"/>
                                             </div>
                                             
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Journal Remarks</div>
+                                                <div class = "sl-form-label-override">Journal Remarks</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="journal_remark"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="journal_remark" placeholder = "--"/>
                                             </div>
                                         </group>
 
@@ -477,38 +477,38 @@
                                         <group class = "sl-accounting-format-bg">
 
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Payment Term</div>
+                                                <div class = "sl-form-label-override">Payment Term</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="payment_term"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="payment_term" placeholder = "--"/>
                                             </div>
 
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Payment Method</div>
+                                                <div class = "sl-form-label-override">Payment Method</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="payment_method"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="payment_method" placeholder = "--"/>
                                             </div>
                                             
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">BP Project </div>
+                                                <div class = "sl-form-label-override">BP Project </div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="bp_project"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="bp_project" placeholder = "--"/>
                                             </div>
                                             
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Indicator</div>
+                                                <div class = "sl-form-label-override">Indicator</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="indicator"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="indicator" placeholder = "--"/>
                                             </div>
                                             
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Tax ID</div>
+                                                <div class = "sl-form-label-override">Tax ID</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="tax_id"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="tax_id" placeholder = "--"/>
                                             </div>
                                             
                                             
@@ -517,24 +517,24 @@
                                         <group class = "sl-accounting-format-bg">
                                             
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Due Date</div>
+                                                <div class = "sl-form-label-override">Due Date</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="due_date"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="due_date" placeholder = "--"/>
                                             </div>
                                             
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Cancellation Date</div>
+                                                <div class = "sl-form-label-override">Cancellation Date</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="cancellation_date"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="cancellation_date" placeholder = "--"/>
                                             </div>
                                             
                                             <span class = "o_form_label o_td_label">
-                                                <div class = "o_form_label_override">Required Date</div>
+                                                <div class = "sl-form-label-override">Required Date</div>
                                             </span>
-                                            <div class = "input-box-parent-div">
-                                                <field class = "summary_type" name="required_date"/>
+                                            <div class = "sl-input-box-parent-div">
+                                                <field name="required_date" placeholder = "--"/>
                                             </div>
                                             
                                             
