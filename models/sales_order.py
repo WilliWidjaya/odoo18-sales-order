@@ -100,3 +100,6 @@ class SalesOrder(models.Model):
             self.pay_ta = str(self.payment_info.payment_details)
         else:
             self.pay_ta = ""
+
+    def do_nothing(self):
+        return
