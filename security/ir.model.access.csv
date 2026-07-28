@@ -6,3 +6,4 @@ sales_order.access_payment_info,access_payment_info,sales_order.model_payment_in
 sales_order.access_sales_item,access_sales_item,sales_order.model_sales_item,base.group_user,1,1,1,1
 sales_order.access_sales_customer,access_sales_customer,sales_order.model_sales_customer,base.group_user,1,1,1,1
 sales_order.access_sales_contact,access_sales_contact,sales_order.model_sales_contact,base.group_user,1,1,1,1
+sales_order.access_shipping_type,access_shipping_type,sales_order.model_shipping_type,base.group_user,1,1,1,1

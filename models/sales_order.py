@@ -5,15 +5,18 @@ class SalesOrder(models.Model):
     _description = "Sales Order Main"
 
     # ---------- Informasi Di Header
-    name = fields.Char() # JANGAN TUNJUKIN INI, buat @api.depends('sales_id') untuk set name
+    name = fields.Char(compute = "set_sales_name") # JANGAN TUNJUKIN INI, buat @api.depends('sales_id') untuk set name
     sales_id = fields.Char()
-    customer_id = fields.Char()
-    contact_person = fields.Many2one('res.partner')
+    customer_id = fields.Many2one('sales_customer')
+    contact_person = fields.Many2one('sales_contact')
     customer_ref_no = fields.Char()
     currency = fields.Char()
     
     sales_order_number = fields.Char()
-    sales_order_status = fields.Char()
+    sales_order_status = fields.Selection(
+        string = "Item or Service", 
+        selection =  [('status_open', 'Open'), ('status_closed', 'Closed'), ('status_cancelled', 'Cancelled')]
+    )
     
     posting_date = fields.Date()
     delivery_date = fields.Date()
@@ -39,11 +42,7 @@ class SalesOrder(models.Model):
     ship_ta = fields.Text()
     pay_ta = fields.Text()
 
-    shipping_type = fields.Selection(
-        string = "Shipping Type",
-        selection = [('type_1', 'type 1'), ('type_2', 'type_2')],
-        help = "Tentukan shipping type"
-    )
+    shipping_type = fields.Many2one('shipping_type')
     bp_channel_name = fields.Char()
     bp_channel_contact = fields.Many2one('res.partner')
 
@@ -70,6 +69,23 @@ class SalesOrder(models.Model):
     # ------------- Attachments
     att_attachment = fields.Many2many(comodel_name="ir.attachment")
 
+    @api.depends('sales_id')
+    def set_sales_name(self):
+        for i in self:
+            i.name = i.sales_id
+
+    # Autofill customer reference number apabila dia ada. 
+    @api.onchange('customer_id')
+    def autoset_customer_ref_no(self):
+        # Memeriksa apakah customer_id itu diisi ato tidak customer_ref_no
+        if self.customer_id.customer_ref_no != False or self.customer_id.customer_ref_no != "":
+            # Masukan customer_ref_no pada self apabila customer_ref_no milik customer_id terisi.
+            self.customer_ref_no = self.customer_id.customer_ref_no
+        else:
+            self.customer_ref_no = ""
+
+
+    # Autofill di kotak di kanan shipping location Many2one
     @api.onchange('shipping_location')
     def set_ship_ta(self):
         if self.shipping_location:
@@ -77,6 +93,7 @@ class SalesOrder(models.Model):
         else:
             self.ship_ta = ""
 
+    # Autofill di kotak di kanan payment info Many2one
     @api.onchange('payment_info')
     def set_pay_ta(self):
         if self.payment_info:

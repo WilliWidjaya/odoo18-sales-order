@@ -5,5 +5,6 @@ class SalesCustomer(models.Model):
     _description = "Sales Customer"
 
     name = fields.Char()
+    customer_ref_no = fields.Char()
     customer_information = fields.Text()
     

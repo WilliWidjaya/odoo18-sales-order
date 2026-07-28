@@ -5,11 +5,13 @@
                 <menuitem id="menu1" action = "sales_order_action"/>
             </menuitem>
             <menuitem id="master" name="Master">
+                <!-- web_icon="sales_order,static/src/description/sales_plus_icon_512_512.png" -->
                 <menuitem id="view_items" action = "sales_contact_action"/>
                 <menuitem id="view_contacts" action = "sales_customer_action"/>
                 <menuitem id="view_vendors" action = "sales_item_action"/>
                 <menuitem id="view_shipping_locations" action = "sales_ship_location_action"/>
                 <menuitem id="view_pay_accounts" action = "sales_payment_info_action"/>
+                <menuitem id="view_shipping_type" action = "sales_shipping_type_action"/>
             </menuitem>
         </menuitem>
     </data>
