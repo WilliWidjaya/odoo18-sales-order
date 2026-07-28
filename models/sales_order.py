@@ -1,4 +1,11 @@
 from odoo import api, fields, models
+from jinja2 import Environment, select_autoescape, FileSystemLoader
+from weasyprint import HTML, CSS
+from datetime import datetime
+import base64
+
+# For Opening the file after making the pdf
+from pathlib import Path
 
 class SalesOrder(models.Model):
     _name = "sales_order"
@@ -65,6 +72,47 @@ class SalesOrder(models.Model):
     indicator = fields.Char()
     tax_id = fields.Char()
     order_number = fields.Char()
+
+    # ----- CREATING SALES REPORT
+
+    def create_sales_report(self):
+            early_path = __file__ # __file__ points to this current .py file.
+            def_filepath = Path(early_path).resolve().parent.parent # grab parent folder of our parent folder.
+            
+            env = Environment(
+            loader=FileSystemLoader(str(def_filepath / "templates")),
+            autoescape=select_autoescape()
+            )
+            template = env.get_template("template_sales_order.html")
+    
+            template_render = template.render(
+                # ========== Main Information, Table Information
+                name = self.name,
+            )
+    
+            template_html = HTML(string = template_render)
+            po_css = CSS(str(def_filepath / "templates" / "sales_style.scss"))
+            generated_file = template_html.write_pdf(stylesheets = [po_css])
+            
+            file_name = self.name + "_sales_order_" + datetime.now().strftime("%d%m%Y_%H%M%S")
+    
+            # Create new ir.attachment (dia persistent dan bisa diakses di Odoo ir.attachments)
+            f_attachment = self.env['ir.attachment'].create({
+                'name' : f'{file_name}.pdf',
+                'type' : 'binary', 
+                'datas' : base64.b64encode(generated_file),
+                'res_model' : self._name,
+                'res_id' : self.id,
+                'mimetype' : 'application/pdf'
+            })
+    
+            # Buka file dengan ir.actions.act_url Odoo 
+            return {
+                'type' : 'ir.actions.act_url',
+                'url' : f'/web/content/{f_attachment.id}?download=true',
+                'target' : 'new',
+            }
+    
 
     # ------------- Attachments
     att_attachment = fields.Many2many(comodel_name="ir.attachment")
