@@ -49,12 +49,24 @@
             <field name="model">sales_order</field>
             <field name="arch" type="xml">
                 <list string = "Channel">
-                    <field name="name"/>
-                    <field name="customer_id"/>
-                    <field name="contact_person"/>
+                    <field name="name" string ="Sales ID"/>
+                    <field name="sales_order_number"/>
+                    <field name="customer_id" string = "Customer ID"/>
+                    <field name="customer_ref_no" string = "Customer Ref. No."/>
+                    <field name="sales_order_status" widget="badge"
+                           decoration-muted="sales_order_status == 'status_draft'"
+                           decoration-primary="sales_order_status == 'status_processing'"
+                           decoration-warning="sales_order_status == 'status_shipped'"
+                           decoration-secondary="sales_order_status == 'status_delivered'"
+                           decoration-info="sales_order_status == 'status_invoiced'"
+                           decoration-success="sales_order_status == 'status_completed'"
+                           decoration-danger="sales_order_status == 'status_cancelled'"/>
+                    <field name="posting_date"/>
+                    <field name="delivery_date"/>
+                    <field name="document_date"/>
                 </list>
             </field>
-        </record>
+        </record>   
         
         <!-- SALES SHIPPING TYPE ACTION -->
         <record id="sales_shipping_type_action" model="ir.actions.act_window">

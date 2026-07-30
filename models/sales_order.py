@@ -21,9 +21,19 @@ class SalesOrder(models.Model):
     
     sales_order_number = fields.Char()
     sales_order_status = fields.Selection(
-        string = "Item or Service", 
-        selection =  [('status_open', 'Open'), ('status_closed', 'Closed'), ('status_cancelled', 'Cancelled')]
-    )
+        string="Sales Order Status",
+            selection=[
+                ('status_draft', 'Draft'),
+                ('status_confirmed', 'Confirmed'),
+                ('status_processing', 'Processing'),
+                ('status_shipped', 'Shipped'),
+                ('status_delivered', 'Delivered'),
+                ('status_invoiced', 'Invoiced'),
+                ('status_paid', 'Paid'),
+                ('status_completed', 'Completed'),
+                ('status_cancelled', 'Cancelled'),
+    ]
+)
     
     posting_date = fields.Date()
     delivery_date = fields.Date()
