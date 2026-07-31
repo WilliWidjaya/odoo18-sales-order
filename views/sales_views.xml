@@ -54,10 +54,9 @@
                     <field name="customer_id" string = "Customer ID"/>
                     <field name="customer_ref_no" string = "Customer Ref. No."/>
                     <field name="sales_order_status" widget="badge"
-                           decoration-muted="sales_order_status == 'status_draft'"
+                           decoration-muted="sales_order_status in ('status_draft', 'status_delivered')"
                            decoration-primary="sales_order_status == 'status_processing'"
                            decoration-warning="sales_order_status == 'status_shipped'"
-                           decoration-secondary="sales_order_status == 'status_delivered'"
                            decoration-info="sales_order_status == 'status_invoiced'"
                            decoration-success="sales_order_status == 'status_completed'"
                            decoration-danger="sales_order_status == 'status_cancelled'"/>
